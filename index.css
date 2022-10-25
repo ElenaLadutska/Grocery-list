@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url(./fonts/Raleway-Bold.ttf);
+}
+
+:root {
+  --monte-carlo: #80ccb2;
+  --white: #fff;
+}
+
+body {
+  font-family: 'Raleway-Bold';
+}
+
+header {
+  background-color: var(--monte-carlo);
+  color: var(--white);
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+
+.typing-container {
+  width: 30%;
+  display: flex;
+  border-bottom: 1px solid var(--monte-carlo);
+}
+
+.typing-container img {
+  cursor: pointer;
+}
+
+#text-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 3vh;
+  color: var(--monte-carlo);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1vh;
+}
+
+#grocery-list {
+  margin-top: 2vh;
+  color: var(--monte-carlo);
+}
+
+#grocery-list li {
+  cursor: pointer;
+  margin: 2vh 0;
+	list-style: none;
+}
+
+#grocery-list li:hover {
+  text-decoration: underline;
+}
