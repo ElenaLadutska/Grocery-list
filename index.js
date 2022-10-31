@@ -16,7 +16,8 @@ const addGood = () => {
   groceryList.append(good);
 
   good.addEventListener('click', function() {
-    good.style.textDecoration = 'line-through';
+    good.classList.toggle('through');
+    console.log(good.classList)
   });
 };
 

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Raleway-Bold';
-  src: url(./fonts/Raleway-Bold.ttf);
+  src: url(./font/Raleway-Bold.ttf);
 }
 
 :root {
@@ -64,4 +64,12 @@ header {
 
 #grocery-list li:hover {
   text-decoration: underline;
+}
+
+.good-li {
+  font-size: 2.5vh;
+}
+
+.through {
+  text-decoration: line-through;
 }
