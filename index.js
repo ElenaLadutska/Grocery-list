@@ -1,5 +1,5 @@
 const input = document.getElementById('text-input');
-let groceryList = document.getElementById('grocery-list');
+const groceryList = document.getElementById('grocery-list');
 const eraser = document.getElementById('eraser');
 
 input.addEventListener('keydown', event => {
@@ -10,14 +10,13 @@ input.addEventListener('keydown', event => {
 });
 
 const addGood = () => {
-  let good = document.createElement('li');
+  const good = document.createElement('li');
   good.className ='good-li';
   good.textContent = input.value;
   groceryList.append(good);
 
   good.addEventListener('click', function() {
     good.classList.toggle('through');
-    console.log(good.classList)
   });
 };
 
