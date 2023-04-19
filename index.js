@@ -19,7 +19,6 @@ const addGood = () => {
     goodLi.classList.toggle('chosen');
     checkTheList(btnDeleteChosenItems)
   });
-  // ПЕРЕПИСАТЬ
 };
 
 const checkTheList = (btnName) => {
