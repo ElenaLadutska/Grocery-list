@@ -1,75 +1,210 @@
 @font-face {
   font-family: 'Raleway-Bold';
-  src: url(./font/Raleway-Bold.ttf);
+  src: url(./fonts/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: 'Reenie Beanie';
+  src: url(./fonts/ReenieBeanie-Regular.ttf);
 }
 
 :root {
   --monte-carlo: #80ccb2;
   --white: #fff;
+  --grey: grey;
+  --romantic: #FED6BC;
+  --scotch-mist: #FFFADD;
+  --mabel: #DEF7FE;
+  --titan-white: #E7ECFF;
+  --aero-blue: #C3FBD8;
+  --half-colonial-white: #FDEED9;
+  --hint-of-green: #F6FFF8;
+  --ice-cold: #B5F2EA;
+  --periwinkle: #C6D8FF
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+:focus::-moz-placeholder {
+  color: transparent; 
+}
+:focus:-moz-placeholder {
+  color: transparent;
+}
+:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--hint-of-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--half-colonial-white);
 }
 
 body {
-  font-family: 'Raleway-Bold';
+  font-family: 'Reenie Beanie';
+  color: var(--titan-white);
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  height: 10rem;
+  font-family: 'Reenie Beanie';
+  font-size: 2em;
+  word-wrap: break-word;
+  overflow: auto;
 }
 
 header {
   background-color: var(--monte-carlo);
   color: var(--white);
-  height: 4vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 4vh;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+::placeholder {
+  font-size: 1em;
+
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  margin-top: 2vh;
+  margin: 1.5em 1em;
 }
 
 .typing-container {
   width: 30%;
   display: flex;
-  border-bottom: 1px solid var(--monte-carlo);
+  margin: 0 auto;
+  border-bottom: 0.15em solid var(--monte-carlo);
 }
 
-.typing-container img {
+#eraser {
   cursor: pointer;
 }
 
 #text-input {
   width: 100%;
   font-family: inherit;
-  font-size: 3vh;
+  font-size: 2em;
   color: var(--monte-carlo);
   outline: none;
   border: none;
   cursor: pointer;
-  margin-left: 1vh;
+  text-overflow: ellipsis;
 }
 
 #grocery-list {
-  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1em;
   color: var(--monte-carlo);
 }
 
-#grocery-list li {
+.good {
+  margin-left: 2.5em;
+}
+
+#grocery-list .chosen a {
+  opacity: 50%;
+  color: var(--grey);
+  background-color: var(--titan-white);
+}
+
+.remove {
+  width: fit-content;
+  display: flex;
+  margin: 1em auto;
+}
+
+#deleteAll {
+  margin-right: 1em;
+}
+
+#deleteAll,
+#deleteChosen {
+  display: none;
   cursor: pointer;
-  margin: 2vh 0;
-	list-style: none;
 }
 
-#grocery-list li:hover {
-  text-decoration: underline;
+#deleteAll.active, 
+#deleteChosen.active {
+  display: flex;
+  align-items: center;
+  font-family: 'Reenie Beanie';
+  font-size: 1.5em;
+  background-color: transparent;
+  border: 0.1em solid var(--monte-carlo);
+  border-radius: 10px;
+  color: var(--monte-carlo);
+  transition: all 0.3s ease-in-out;
 }
 
-.good-li {
-  font-size: 2.5vh;
+#deleteAll:hover, 
+#deleteAll:active,
+#deleteChosen:hover,
+#deleteChosen:active {
+  opacity: 100%;
+  color: var(--romantic);
+  border-color: var(--romantic);
 }
 
-.through {
-  text-decoration: line-through;
+ul li a{
+  text-decoration:none;
+  color:#000;
+  background-color:var(--romantic);
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  transform: rotate(-6deg);
+  transition: transform .15s linear;
 }
+
+ul li:nth-child(even) a{
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background-color: var(--scotch-mist);
+}
+ul li:nth-child(3n) a{
+  transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background-color:var(--ice-cold);
+}
+ul li:nth-child(5n) a{
+  transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+
+ul li a:hover,ul li a:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+ul li{
+  margin:1em;
+}
+

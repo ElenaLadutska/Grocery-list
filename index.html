@@ -9,16 +9,24 @@
   <title>Grocery List</title>
 </head>
 <body>
-  <header>Grocery List</header>
+  <header>-COCKTAIL-</header>
   
   <div class="container">
     <div class="typing-container">
-      <img src="./assets/eraser.png" alt="eraser" id="eraser">
-
-      <input type="text" id="text-input">
+      <input type="text" id="text-input" placeholder="Type task name...">
     </div>
 
-    <div id="grocery-list"></div>
+    <div class="remove">
+      <button id="deleteAll">
+        Delete all
+      </button>
+
+      <button id="deleteChosen">
+        Delete done
+      </button>
+    </div>
+
+    <ul id="grocery-list"></ul>
   </div>
 </body>
 <script src="index.js"></script>
